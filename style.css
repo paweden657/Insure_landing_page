@@ -30,10 +30,6 @@ header {
     width: 100%;
     height: 25%;
 
-    background-image: url(images/bg-pattern-intro-right-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: right top;
-
     background-color: var(--clr-primary-dark-violet);
 }
 nav {
@@ -86,6 +82,16 @@ a {
     color: var(--clr-neutral-very-light-gray);
     background-color: var(--clr-primary-dark-violet);
 }
+#bg-pattern-right-desktop {
+    position: absolute;
+
+    top: 0;
+    right: 0%;
+
+    z-index: 2;
+
+    transform: translate(10%, -10%) scale(0.8);
+}
 #header-text-container {
     width: 35%;
     margin: 10% 0 0 10%;
@@ -118,11 +124,11 @@ h1 {
     background-color: var(--clr-neutral-very-light-gray);
     color: var(--clr-primary-dark-violet);
 }
-#photos-container {
+.photos-container {
     position: relative;
     width: 100%;
 }
-#bg-pattern {
+#bg-pattern-left-desktop {
     position: absolute;
 
     top: 0;
@@ -130,7 +136,7 @@ h1 {
 
     transform: translate(-10%, -50%);
 }
-#family-photo {
+#family-photo-desktop {
     position: absolute;
 
     top: 50%;
