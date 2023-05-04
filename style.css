@@ -46,10 +46,7 @@ nav img {
     height: 50%;
     margin-left: 10%;
 }
-a {
-    color: var(--clr-neutral-dark-grayish-violet);
-    text-decoration: none;
-}
+
 #nav-links {
     display: flex;
     justify-content: end;
@@ -61,6 +58,13 @@ a {
     height: 75%;
 
     margin-right: 10%;
+}
+#nav-links a {
+    color: var(--clr-neutral-dark-grayish-violet);
+    text-decoration: none;
+}
+#nav-links a:hover {
+    color: var(--clr-neutral-very-dark-violet);
 }
 #nav-links p {
     margin: 0;
@@ -91,6 +95,9 @@ a {
     z-index: 2;
 
     transform: translate(10%, -10%) scale(0.8);
+}
+.hide {
+    display: none !important;
 }
 #header-text-container {
     width: 35%;
@@ -128,6 +135,10 @@ h1 {
     position: relative;
     width: 100%;
 }
+#family-photo-mobile {
+    width: 100%;
+}
+
 #bg-pattern-left-desktop {
     position: absolute;
 
@@ -150,9 +161,6 @@ main {
     height: 55%;
     padding: 25% 10% 10% 10%;
 }
-#main-text-container {
-    height: 40%;
-}
 #horizontal-bar-2 {
     width: 13.125%;
     background-color: var(--clr-primary-dark-violet);
@@ -170,7 +178,7 @@ h2 {
     gap: 5%;
 }
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.5rem;  
     margin-bottom: 0;
 }
 #how-we-work-section {
@@ -178,11 +186,10 @@ h3 {
     align-items: center;
     justify-content: space-around;
 
-    height: 20%;
-
     background-image: url(images/bg-pattern-how-we-work-desktop.svg);
     background-repeat: no-repeat;
     background-position: right center;
+    background-size: contain;
 
     color: var(--clr-neutral-very-light-gray);
     background-color: var(--clr-primary-dark-violet);
@@ -191,5 +198,42 @@ h3 {
     width: 50%;
 }
 footer {
-    height: 20%;
+    padding: 5% 10%;
+    background-color: var(--clr-neutral-very-light-gray);
+    background-image: url(images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+#logos {
+    display: flex;
+    justify-content: space-between;
+}
+#logos div {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+    gap: 5%
+}
+#logos svg:hover path {
+    fill: black;
+}
+#FAQ {
+    display: flex;
+    margin-top: 3%;
+}
+#FAQ div {
+    margin-right: 12%;
+}
+.footer-heading {
+    margin-bottom: 3%;
+    color: var(--clr-neutral-dark-grayish-violet);
+}
+#FAQ a {
+    color: var(--clr-neutral-very-dark-violet);
+    text-decoration: none;
+    
+}
+#FAQ a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--clr-neutral-very-dark-violet);
 }
