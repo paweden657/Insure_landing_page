@@ -6,6 +6,8 @@
     --clr-neutral-dark-grayish-violet: hsl(273, 4%, 51%);
     --clr-neutral-very-light-gray: hsl(0, 0%, 98%);
 
+    --clr-primary-dark-violet-hsl: 256, 26%;
+
     --fs: 16px;
 
     --ff-headings: 'DM Serif Display', serif;
@@ -25,10 +27,13 @@ body {
     font-family: var(--ff-body);
     font-weight: var(--fw-400);
 }
+@media only screen and (max-width: 768px) {
+    body {
+        text-align: center;
+    }
+}
 header {
-
     width: 100%;
-    height: 25%;
 
     background-color: var(--clr-primary-dark-violet);
 }
@@ -46,7 +51,6 @@ nav img {
     height: 50%;
     margin-left: 10%;
 }
-
 #nav-links {
     display: flex;
     justify-content: end;
@@ -58,6 +62,11 @@ nav img {
     height: 75%;
 
     margin-right: 10%;
+}
+@media only screen and (max-width: 768px) {
+    #nav-links {
+        display: none;
+    }
 }
 #nav-links a {
     color: var(--clr-neutral-dark-grayish-violet);
@@ -80,13 +89,36 @@ nav img {
     outline: 2px solid var(--clr-primary-dark-violet);
     color: var(--clr-primary-dark-violet);
 }
-
 #view-btn-1:hover {
     cursor: pointer;
     color: var(--clr-neutral-very-light-gray);
     background-color: var(--clr-primary-dark-violet);
 }
-#bg-pattern-right-desktop {
+@media only screen and (max-width: 768px) {
+    #hamburger-icon {
+        display: block !important;
+
+        margin-right: 10%;
+        margin-left: 0;
+        height: 75%;
+    }
+    #hamburger-icon:hover {
+        cursor: pointer;
+    }
+}
+.photos-container {
+    position: relative;
+    width: 100%;
+}
+#family-photo-mobile {
+    width: 100%;
+}
+@media only screen and (max-width: 768px) {
+    #family-photo-mobile {
+        display: block !important;
+    }
+}
+#bg-pattern-right {
     position: absolute;
 
     top: 0;
@@ -95,6 +127,20 @@ nav img {
     z-index: 2;
 
     transform: translate(10%, -10%) scale(0.8);
+}
+@media only screen and (max-width: 768px) {
+    #bg-pattern-left-mobile {
+        display: block !important;
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+
+        transform: translate(0, 100%) 
+    }
+    #bg-pattern-right {
+        display: none;
+    }
 }
 .hide {
     display: none !important;
@@ -106,12 +152,24 @@ nav img {
     color: var(--clr-neutral-very-light-gray);
 
 }
+@media only screen and (max-width: 768px) {
+    #header-text-container {
+        width: 90%;
+        margin: 5% 0 0 5%;
+        padding: 10% 0;
+    }
+}
 .horizontal-bar {
     width: 30%;
     height: 2px;
 }
 #horizontal-bar-1 {
     background-color: var(--clr-neutral-very-light-gray);
+}
+@media only screen and (max-width: 768px) {
+    #horizontal-bar-1 {
+        display: none;
+    }
 }
 h1, h2, h3 {
     font-family: var(--ff-headings);
@@ -131,21 +189,27 @@ h1 {
     background-color: var(--clr-neutral-very-light-gray);
     color: var(--clr-primary-dark-violet);
 }
-.photos-container {
-    position: relative;
-    width: 100%;
-}
-#family-photo-mobile {
-    width: 100%;
-}
-
-#bg-pattern-left-desktop {
+#bg-pattern-left {
     position: absolute;
 
     top: 0;
     left: 0;
 
     transform: translate(-10%, -50%);
+}
+@media only screen and (max-width: 768px) {
+    #bg-pattern-left {
+        display: none;
+    }
+    #bg-pattern-right-mobile {
+        display: block !important;
+        position: absolute;
+
+        top: 0;
+        right: 0;
+
+        transform: translate(0, -30%)
+    }
 }
 #family-photo-desktop {
     position: absolute;
@@ -157,13 +221,34 @@ h1 {
 
     width: 40%;
 }
+@media only screen and (max-width: 768px) {
+    #family-photo-desktop {
+        display: none;
+    }
+}
 main {
-    height: 55%;
     padding: 25% 10% 10% 10%;
+}
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 25% 5% 10% 5%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #main-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 #horizontal-bar-2 {
     width: 13.125%;
     background-color: var(--clr-primary-dark-violet);
+}
+@media only screen and (max-width: 768px) {
+    #horizontal-bar-2 {
+        width: 50%;
+    }
 }
 h2 {
     font-size: 2.9rem;
@@ -176,6 +261,16 @@ h2 {
     margin-bottom: 10%;
 
     gap: 5%;
+}
+@media only screen and (max-width: 768px) {
+    #columns {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .column{
+        margin-bottom: 15%;
+    }
 }
 h3 {
     font-size: 1.5rem;  
@@ -197,6 +292,18 @@ h3 {
 #how-we-work-h2 {
     width: 50%;
 }
+@media only screen and (max-width: 768px) {
+    #how-we-work-section {
+        flex-direction: column;
+
+        background-image: url(images/bg-pattern-how-we-work-mobile.svg);
+        padding: 10% 5% 10% 5%;
+    }
+    #how-we-work-h2 {
+        width: 100%;
+        margin-top: 0;
+    }
+}
 footer {
     padding: 5% 10%;
     background-color: var(--clr-neutral-very-light-gray);
@@ -204,9 +311,28 @@ footer {
     background-repeat: no-repeat;
     background-position: left top;
 }
+@media only screen and (max-width: 768px) {
+    footer {
+        padding: 10% 5%;
+        background-image: url(images/bg-pattern-footer-mobile.svg);
+    }
+}
+#horizontal-bar-3 {
+    width: 100%;
+
+    background-color: var(--clr-neutral-dark-grayish-violet);
+}
 #logos {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5%;
+}
+@media only screen and (max-width: 768px) {
+    #logos {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
 }
 #logos div {
     display: flex;
@@ -214,19 +340,42 @@ footer {
     width: 30%;
     gap: 5%
 }
+@media only screen and (max-width: 768px) {
+    #logos div {
+        width: 50%;
+        justify-content: center;
+        margin: 7% 0;
+    }
+}
 #logos svg:hover path {
     fill: black;
 }
 #FAQ {
     display: flex;
-    margin-top: 3%;
+    margin-top: 5%;
+}
+@media only screen and (max-width: 768px) {
+    #FAQ {
+        flex-direction: column;
+        margin: 0;
+    }
 }
 #FAQ div {
     margin-right: 12%;
 }
+@media only screen and (max-width: 768px) {
+    #FAQ div {
+        margin-right: 0;
+    }
+}
 .footer-heading {
     margin-bottom: 3%;
     color: var(--clr-neutral-dark-grayish-violet);
+}
+@media only screen and (max-width: 768px) {
+    .footer-heading {
+        margin: 7% 0;
+    }
 }
 #FAQ a {
     color: var(--clr-neutral-very-dark-violet);
