@@ -147,7 +147,7 @@ nav img {
 }
 #header-text-container {
     width: 35%;
-    margin: 10% 0 0 10%;
+    margin: 10% auto 0 10%;
     padding-bottom: 10%;
     color: var(--clr-neutral-very-light-gray);
 
@@ -155,8 +155,7 @@ nav img {
 @media only screen and (max-width: 768px) {
     #header-text-container {
         width: 90%;
-        margin: 5% 0 0 5%;
-        padding: 10% 0;
+        margin: 5% auto 0 auto; 
     }
 }
 .horizontal-bar {
@@ -172,14 +171,25 @@ nav img {
     }
 }
 h1, h2, h3 {
+    position: relative;
+    z-index: 2;
+    
     font-family: var(--ff-headings);
     font-weight: var(--fw-400);
 }
+p {
+    position: relative;
+    z-index: 2;
+}
 h1 {
     font-size: 3rem;
+    margin-top: 0;
     margin-bottom: 0;
 }
 #view-btn-2, #how-we-work-btn  {
+    position: relative;
+    z-index: 2;
+
     outline: 2px solid var(--clr-neutral-very-light-gray);
     color: var(--clr-neutral-very-light-gray);
 
@@ -288,6 +298,11 @@ h3 {
 
     color: var(--clr-neutral-very-light-gray);
     background-color: var(--clr-primary-dark-violet);
+}
+@media only screen and (max-width: 768px) {
+    #how-we-work-section {
+        background-image: url(images/bg-pattern-how-we-work-mobile.svg);
+    }
 }
 #how-we-work-h2 {
     width: 50%;
