@@ -70,6 +70,7 @@ nav img {
 }
 #nav-links a {
     color: var(--clr-neutral-dark-grayish-violet);
+
     text-decoration: none;
 }
 #nav-links a:hover {
@@ -91,6 +92,7 @@ nav img {
 }
 #view-btn-1:hover {
     cursor: pointer;
+
     color: var(--clr-neutral-very-light-gray);
     background-color: var(--clr-primary-dark-violet);
 }
@@ -104,6 +106,45 @@ nav img {
     }
     #hamburger-icon:hover {
         cursor: pointer;
+    }
+    #nav-list {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 5% 2.5%;
+
+        background-image: url(images/bg-pattern-mobile-nav.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right bottom;
+
+        background-color: var(--clr-neutral-very-dark-violet);
+    }
+    #nav-list a {
+        color: var(--clr-neutral-very-light-gray);
+
+        text-decoration: none;
+    }
+    #nav-list a:hover {
+        text-decoration: underline;
+    
+        text-decoration-color: var(--clr-neutral-very-light-gray);
+    }
+    #nav-list p {
+        margin: 0 auto 5% auto;
+    }
+    #view-btn-mobile-1 {
+        width: 356px;
+        
+        outline: 2px solid var(--clr-neutral-very-light-gray);
+        color: var(--clr-neutral-very-light-gray);
+    }
+    #view-btn-mobile-1:hover {
+        cursor: pointer;
+
+        color: var(--clr-neutral-very-dark-violet);
+        background-color: var(--clr-neutral-very-light-gray);
     }
 }
 .photos-container {
@@ -147,14 +188,17 @@ nav img {
 }
 #header-text-container {
     width: 35%;
+
     margin: 10% auto 0 10%;
     padding-bottom: 10%;
+
     color: var(--clr-neutral-very-light-gray);
 
 }
 @media only screen and (max-width: 768px) {
     #header-text-container {
         width: 90%;
+
         margin: 5% auto 0 auto; 
     }
 }
@@ -172,17 +216,20 @@ nav img {
 }
 h1, h2, h3 {
     position: relative;
+
     z-index: 2;
-    
+
     font-family: var(--ff-headings);
     font-weight: var(--fw-400);
 }
 p {
     position: relative;
+
     z-index: 2;
 }
 h1 {
     font-size: 3rem;
+
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -196,6 +243,7 @@ h1 {
 }
 #view-btn-2:hover, #how-we-work-btn:hover {
     cursor: pointer;
+
     background-color: var(--clr-neutral-very-light-gray);
     color: var(--clr-primary-dark-violet);
 }
@@ -253,6 +301,7 @@ main {
 }
 #horizontal-bar-2 {
     width: 13.125%;
+
     background-color: var(--clr-primary-dark-violet);
 }
 @media only screen and (max-width: 768px) {
@@ -283,7 +332,8 @@ h2 {
     }
 }
 h3 {
-    font-size: 1.5rem;  
+    font-size: 1.5rem;
+
     margin-bottom: 0;
 }
 #how-we-work-section {
@@ -391,6 +441,9 @@ footer {
     .footer-heading {
         margin: 7% 0;
     }
+    #FAQ p {
+        margin: 5%;
+    }
 }
 #FAQ a {
     color: var(--clr-neutral-very-dark-violet);
@@ -399,5 +452,6 @@ footer {
 }
 #FAQ a:hover {
     text-decoration: underline;
+
     text-decoration-color: var(--clr-neutral-very-dark-violet);
 }
